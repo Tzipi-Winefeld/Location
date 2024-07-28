@@ -1,0 +1,23 @@
+﻿@model Location2.Models.Settlement
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>מחיקה</h1>
+
+<h4>ישוב</h4>
+<hr />
+<div>
+    <h4>אתה בטוח שאתה רוצה למחוק את </h4>
+    <div>
+        <h4>?@Model.Name</h4>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="מחיקה" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-secondary">ביטול</a>
+            </div>
+        </form>
+    </div>
+</div>
